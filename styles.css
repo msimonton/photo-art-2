@@ -1,0 +1,51 @@
+html, body  {
+  width: 100%;
+  padding: 0;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%
+}
+
+#home-top, #home-second, #home-main-content, #home-fouth, #home-bottom {
+  width: 100%;
+  margin 0;
+}
+
+#home-top {
+  background-color:#40B6B7;
+  height: 15px;
+}
+
+#home-second  {
+  background-color: #FFFFFF;
+  height: 150px;
+
+}
+
+#home-main-content  {
+  background-color: #242E49;
+  height: 800px;
+
+}
+
+#home-fourth  {
+      background-image: url('http://www.kirstenalana.com/wp-content/uploads/2016/06/teal-tile.png');
+      height: 250px;
+
+}
+
+#home-bottom  {
+  background-color: #EDEDED;
+  height: 300px;
+
+}
+
+#main-logo  {
+  position: absolute;
+  top: 50;
+  left: 50;
+  background-color: red;
+}
