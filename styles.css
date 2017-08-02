@@ -1,6 +1,7 @@
 html, body  {
   width: 100%;
   padding: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .main {
@@ -21,15 +22,78 @@ html, body  {
 
 #home-second  {
   background-color: #FFFFFF;
-  height: 150px;
+  display: flex;
+  height: 170px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
+.links-wrapper {
+
+}
+
+.nav-links  {
+  color:#CEA566;
+  font-size: 22px;
+  margin:0px 10px 0px 10px;
+  letter-spacing: 2px;
+}
+
+#main-logo  {
+
+  margin: 0 20px 0 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.logo {
+  margin: 0;
+  margin: auto;
+  font-size: 50px;
 }
 
 #home-main-content  {
   background-color: #242E49;
   height: 800px;
+  text-align: center;
 
 }
+
+#main-content-header  {
+  color: white;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 40px;
+  padding-top: 50px;
+}
+
+#oscar  {
+  color: white;
+  font-family: 'Bad Script', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+#author {
+  color: white;
+  font-family: 'Bad Script', cursive;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: -70px;
+}
+
+#container1 {
+  width: 60%;
+  margin: auto;
+}
+
+#second {
+  filter: grayscale(100%)
+}
+
+
 
 #home-fourth  {
       background-image: url('http://www.kirstenalana.com/wp-content/uploads/2016/06/teal-tile.png');
@@ -41,11 +105,4 @@ html, body  {
   background-color: #EDEDED;
   height: 300px;
 
-}
-
-#main-logo  {
-  position: absolute;
-  top: 50;
-  left: 50;
-  background-color: red;
 }
