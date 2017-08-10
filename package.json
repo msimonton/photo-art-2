@@ -1,0 +1,22 @@
+{
+  "name": "new-photo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msimonton/photo-art-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msimonton/photo-art-2/issues"
+  },
+  "homepage": "https://github.com/msimonton/photo-art-2#readme",
+  "dependencies": {
+    "aos": "^2.2.0"
+  }
+}
