@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Liz Simonton|Photoart</title>
 
 
 
@@ -62,10 +62,10 @@
         <div id='home-second'>
           <div class='links-wrapper'><a class='nav-links' href ='index.html'>Home</a>
           </div>
-          <div class='links-wrapper'><a class='nav-links' href ='gallery.html'>Gallery</a>
+          <div class='links-wrapper'><a class='nav-links' href ='views/gallery.html'>Gallery</a>
           </div>
           <div id='main-logo'><h1 class='logo'>Liz Simonton</h1><h2 class='logo '>PhotoArt</h2></div>
-        <div class='links-wrapper'><a class='nav-links' href ='about.html'>My Story</a>
+        <div class='links-wrapper'><a class='nav-links' href ='views/about.html'>My Story</a>
         </div>
           <div class='links-wrapper'><a class='nav-links' href ='parallax.html'>Contact Me</a>
           </div>
@@ -83,8 +83,8 @@
           </div>
 
           <div class='col-md-9 col-sm-12' id="slider">
-            <img style="filter: greyscale(100%)"src="images/hotel.jpg" />
-            <img  id='second' src="images/hotel.jpg" />
+            <img src="images/slider/slider-before.jpg" />
+            <img  id='second' src="images/slider/slider-after.jpg" />
             </div>
             <div class='col-md-3 col-sm-12' id='quoter-wrap'>
               <h3 id='main-quote-first'> From a Photo</h3>
@@ -101,17 +101,17 @@
         <h1 class='feature'>Featured Galleries</h1>
         <div class='row' id='block-wrap'>
         <div class="block">
-          <img src="images/bristol.jpg" data-speed=".5" class="img-parallax">
+          <img src="images/abstract/bristol.jpg" data-speed=".5" class="img-parallax">
           <h2>Abstracts</h2>
         </div>
 
         <div class="block">
-          <img src="images/vail.jpg" data-speed="1" class="img-parallax">
+          <img src="images/favorites/vail.jpg" data-speed="1" class="img-parallax">
           <h2>Photo Paintings</h2>
         </div>
 
         <div class="block">
-          <img src="images/hotel.jpg" data-speed="-1" class="img-parallax">
+          <img src="images/photography/hotel.jpg" data-speed="-1" class="img-parallax">
           <h2>Photography</h2>
         </div>
       </div>
@@ -192,14 +192,9 @@
 
 
         var winBottom = winY + winH;
-
-        // If block is shown on screen
         if (winBottom > imgY && winY < imgY + parentH) {
-          // Number of pixels shown after block appear
           var imgBottom = ((winBottom - imgY) * speed);
-          // Max number of pixels until block disappear
           var imgTop = winH + parentH;
-          // Porcentage between start showing until disappearing
           var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
         }
         img.css({
