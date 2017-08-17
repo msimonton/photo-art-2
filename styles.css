@@ -524,11 +524,14 @@ h1  {
   display: none !important;
 }
 
-.resource-img {
-  /*position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    max-width: 100%;
-    max-height: 100%;
-}*/
+.map-test {
+  width: 200px;
+  display: inline-block;
+  margin-right: 10px;
+
+}
+.amcharts-description-div {
+  width: 100% !important;
+  max-height: 700px;
+  width: 700px !important;
+}
