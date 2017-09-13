@@ -7,78 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liz Simonton|Photoart</title>
 
+                        <!-- jQuery cdn -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script> -->
-
-    <script src="../slider/js/jquery.event.move.js" type="text/javascript"></script>
-    <script src="../slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../slider/css/twentytwenty.css" type="text/css" media="screen" />
-
-    <!-- <script src='main.js' type="text/javascript"></script> -->
-
-
-
+                        <!--Font CDNs  -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+                          <!-- Bootstrap CDN  -->
 
-            <!-- Animate on scroll plugin -->
-    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
-
-
-
-
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" type="text/css"/>
-
-
-     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/none.js"></script>
-
-    <script type='text/javascript' src='../main.js'></script>
-
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script type='text/javascript' src='../../javascripts/main.js'></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 
-
-
-
-
-
+    <link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
 
 
   </head>
   <body>
 
+          <!-- Header and Nav  -->
+
     <div id='home-second'>
-      <div class='links-wrapper'><a class='nav-links' href ='../index.html'>Home</a>
+      <div class='links-wrapper'><a class='nav-links' href ='../../index.html'>Home</a>
       </div>
-      <div class='links-wrapper'><a class='nav-links' href ='gallery.html'>Gallery</a>
+      <div class='links-wrapper'><a class='nav-links' href ='gallery/gal-main.html'>Gallery</a>
       </div>
       <div id='main-logo'><h1 class='logo'>Liz Simonton</h1><h2 class='logo '>PhotoArt</h2></div>
-    <div class='links-wrapper'><a class='nav-links' href ='about.html'>My Story</a>
+    <div class='links-wrapper'><a class='nav-links' href ='../about.html'>My Story</a>
     </div>
       <div class='links-wrapper'><a class='nav-links' href ='parallax.html'>Contact Me</a>
       </div>
     </div>
+
+    <!-- About Blurb -->
 
   <div id='about-content-wrap'>
     <div class='row'>
@@ -91,14 +65,14 @@
         </div>
       </div>
       <div class='col-md-4 col-sm-12'>
-        <img id='my-photo' src='../images/about-me.jpg'>
+        <img id='my-photo' src='../../images/main/about-me.jpg'>
       </div>
     </div>
   </div>
 
-
+            <!-- Parallax Image  -->
   <div class="block full-width" >
-    <img src="../images/favorites/les-brick.jpg" data-speed="1" class="img-parallax" id='about-parallax'>
+    <img src="../../images/favorites/les-brick.jpg" data-speed="1" class="img-parallax" id='about-parallax'>
   </div>
 
 
@@ -158,21 +132,7 @@
 
 
 
-  <div  id="chartdiv">
-    <div class='map-slider'>
-      <div class='my-slider-two'>
-        <div class='slide'>
-          <img class='slide-img' src='../images/lambies.jpg'/>
-        </div>
-        <div class='slide'>
-          <img class='slide-img' src='../images/plaza.jpg'/>
-        </div>
-      </div>
-    </div>
-  </div>
 
-
-  <script>$(document).ready(function(){$('.my-slider-two').slick({autoplay: true,autoplaySpeed: 3000,infinite: true,speed: 800,fade: true,cssEase: 'linear',arrows: false,pauseOnHover: false,});});</script>
 
 
 
@@ -196,7 +156,6 @@ $(document).ready(function(){
   <script>
   AOS.init();
 </script> -->
-
 
   <script>
 
@@ -234,19 +193,6 @@ $(document).ready(function(){
       }
     });
   });
-
-
-  $('.my-slider-two').slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    speed: 800,
-    fade: true,
-    cssEase: 'linear',
-    arrows: false,
-    pauseOnHover: false,
-  })
-
 
   });
   </script>
