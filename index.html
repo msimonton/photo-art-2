@@ -8,18 +8,15 @@
     <title>Liz Simonton|Photoart</title>
 
 
-
-
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-
     <script src="slider/js/jquery.event.move.js" type="text/javascript"></script>
     <script src="slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
     <link rel="stylesheet" href="slider/css/twentytwenty.css" type="text/css" media="screen" />
 
-    <!-- <script src='main.js' type="text/javascript"></script> -->
+    <script src='/javascripts/main.js' type="text/javascript"></script>
 
 
 
@@ -36,46 +33,33 @@
 
 
 
-
-    <link rel="stylesheet" href="styles.css">
-
-
-
-
-
-
-
-
+    <script type="text/javascript" src="javascripts/main.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
   <body>
 
 
 
-
+                <!-- Header/Nav -->
 
     <div class='container main'>
-
-
         <div id='home-top'>
         </div>
-
-        <div id='home-second'>
+        <section id='home-second'>
           <div class='links-wrapper'><a class='nav-links' href ='index.html'>Home</a>
           </div>
-          <div class='links-wrapper'><a class='nav-links' href ='views/gallery.html'>Gallery</a>
+          <div class='links-wrapper'><a class='nav-links' href ='views/gallery/gal-main.html'>Gallery</a>
           </div>
           <div id='main-logo'><h1 class='logo'>Liz Simonton</h1><h2 class='logo '>PhotoArt</h2></div>
-        <div class='links-wrapper'><a class='nav-links' href ='views/about.html'>My Story</a>
-        </div>
+          <div class='links-wrapper'><a class='nav-links' href ='views/about.html'>My Story</a>
+          </div>
           <div class='links-wrapper'><a class='nav-links' href ='views/contact.html'>Contact Me</a>
           </div>
-        </div>
+        </section>
 
+                <!-- Before/After Slider -->
 
         <div class='container-fluid' id='home-main-content'>
-          <!-- <h1 id='main-content-header'>Portfolio</h1> -->
-
-
           <div class='row' id='slider-container'>
             <div class='col-md-3 col-sm-12' id='quoter-wrap-one'>
               <h3 id='main-quote-first'> From a Photo</h3>
@@ -94,14 +78,13 @@
         </div>
 
 
-
+                <!-- Featured Gallery Section -->
 
       <div class='container-fluid' id='home-fourth'>
-
         <h1 class='feature'>Featured Galleries</h1>
         <div class='row' id='block-wrap'>
         <div class="block">
-          <img src="images/abstract/bristol.jpg" data-speed=".5" class="img-parallax">
+          <img src="images/gallery/abstract/bristol.jpg" data-speed=".5" class="img-parallax">
           <h2>Abstracts</h2>
         </div>
 
@@ -111,23 +94,19 @@
         </div>
 
         <div class="block">
-          <img src="images/photography/hotel.jpg" data-speed="-1" class="img-parallax">
+          <img src="images/gallery/photography/hotel.jpg" data-speed="-1" class="img-parallax">
           <h2>Photography</h2>
         </div>
       </div>
     </div>
 
 
-
-
       <div class='splitter'>
-
         <p id='oscar'>Life Imitates Art Far More Than </br>Art Imitates Life</p><p id='author'>-Oscar Wilde</p>
-
       </div>
 
 
-
+                <!-- Been Lately Section -->
 
         <div class='container-fluid' id='home-bottom'>
           <div class='row'>
@@ -138,28 +117,15 @@
         <div class='col-md-8 col-sm-12' id='late-wrap'>
           <h2 id='lately-header'>San Fancisco</h2>
         <section id="lately">
-          <img class='tiles' src="images/photo-paintings/seattle.jpg" data-aos="zoom-out-up" data-aos-duration='1000'>
-          <img class='tiles' src="images/photo-paintings/bike-window.jpg" data-aos="flip-left" data-aos-duration='1500'>
-          <img class='tiles' src="images/photo-paintings/sunset.jpg" data-aos="fade-up-right" data-aos-duration='1000'>
-          <img class='tiles' src="images/photo-paintings/broadmoor-walkers.jpg" data-aos="flip-right" data-aos-duration='2500'>
-          <img class='tiles' src="images/photo-paintings/city-shoppers.jpg" data-aos="flip-left" data-aos-duration='1500'>
-          <img class='tiles' src="images/photo-paintings/larimer-square.jpg" data-aos="zoom-in-left" data-aos-duration='1600'>
-          <img class='tiles' src="images/photo-paintings/fao-2.jpg" data-aos="flip-up" data-aos-duration='500'>
-          <img class='tiles' src="images/photo-paintings/glaze-2.jpg" data-aos="zoom-out-up" data-aos-duration='1000'>
-          <img class='tiles' src="images/photo-paintings/lambs.jpg" data-aos="zoom-in-down" data-aos-duration='2000'>
-          <img class='tiles' src="images/photo-paintings/radishes.jpg" data-aos="zoom-in-down" data-aos-duration='2000'>
-          <img class='tiles' src="images/photo-paintings/vail-topaz.jpg" data-aos="zoom-in-down" data-aos-duration='2000'>
-
+          <img class='tiles' src="images/been-lately/san-francisco/baker-beach.jpg" data-aos="zoom-out-up" data-aos-duration='1000'>
+          <img class='tiles' src="images/been-lately/san-francisco/bay-bridge.jpg" data-aos="flip-left" data-aos-duration='1500'>
+          <img class='tiles' src="images/been-lately/san-francisco/cable-car.jpg" data-aos="fade-up-right" data-aos-duration='1000'>
+          <img class='tiles' src="images/been-lately/san-francisco/muir-woods.jpg" data-aos="flip-right" data-aos-duration='2500'>
+          <img class='tiles' src="images/been-lately/san-francisco/top.jpg" data-aos="flip-left" data-aos-duration='1500'>
         </section>
       </div>
     </div>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
-
 
 
     <!-- Initialize Animate On Scroll -->

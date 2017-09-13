@@ -98,9 +98,13 @@ h1  {
 
 #slider {
 
-
- margin: 0;
+  /*border: 5px solid #CEA566;*/
+ margin: auto;
   margin-top: 50px;
+}
+
+.twentytwenty-overlay {
+  width: 90%;
 }
 
 #quoter-wrap-one  {
@@ -122,6 +126,7 @@ h1  {
 
   #slider {
     margin-top: 10px;
+
   }
 
   #main-quote-first {
@@ -247,18 +252,7 @@ h1  {
   height: 100%;
   margin-top: 200px;
   flex-direction: column;
-
 }
-
-#feature-upper  {
-}
-
-#feature-lower  {
-}
-
-
-
-
 
 .splitter {
   padding: 20px 10px 20px 10px;
@@ -362,6 +356,110 @@ h1  {
   height: 300px;
   display: inline-block;
   background-color: red;
+}
+
+
+
+
+
+        /*  Gallery main style  */
+
+#gal-main-wrap  {
+  text-align: center;
+}
+
+#
+
+.page-headers  {
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  margin: auto;
+  font-size: 55px;
+  text-shadow: 1px 1px 2px black;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.gal-header {
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
+
+.gal-map  {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  border: 2px solid #CEA566;
+  background-color: #89b3da;
+  margin-bottom: 20px;
+}
+
+/*.amcharts-chart-div > a {
+  color: white !important;
+  opacity: .2 !important;
+}*/
+
+.gal-links  {
+  margin: auto;
+  width: 375px;
+  margin-right: 10px;
+  min-width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+
+  border-radius: 2px;
+  margin-right: 40px;
+  /*border: 3px solid white;*/
+  box-shadow: 4px 4px 8px rgb(73,73,73);
+}
+
+.gal-links-img  {
+  width: 620px;
+  height: auto;
+}
+
+#gal-row-top, #gal-row-bottom  {
+
+  margin-bottom: 20px;
+
+}
+
+.gal-header {
+  font-size: 44px;
+}
+
+.gal-links h2{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  /*transform: translateY(-50%);*/
+  font-size: 50px;;
+  color: white;
+  font-weight: 400;
+}
+
+
+            /*   Gallery Trips */
+
+#euro, #world  {
+  cursor: pointer;
+}
+
+.active > h2 {
+  text-decoration: underline;
+}
+
+#eurotrip, #worldtrip {
+  background-color: #74c1d5;
+  position: absolute;
 }
 
 
@@ -516,14 +614,8 @@ h1  {
 
 }
 
-#chartdiv {
-  margin-top: 60px;
-  border: 2px solid white;
-  background-color: white;
-  height: 500px;
-}
 
-.amcharts-export-menu {
+/*.amcharts-export-menu {
   display: none;
 }
 
@@ -547,4 +639,4 @@ h1  {
   width: 100% !important;
   max-height: 700px;
   width: 700px !important;
-}
+}*/
