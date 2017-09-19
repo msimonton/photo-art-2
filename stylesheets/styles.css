@@ -59,6 +59,31 @@ h1  {
   font-family: 'Dancing Script', cursive;
 }
 
+.dropdown {
+  display: none;
+}
+
+.dropdown-btn {
+  width: 40px;
+}
+
+@media screen and (max-width: 800px)  {
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 50;
+    right: 10px;
+  }
+
+  .links-wrapper  {
+    display: none;
+  }
+
+  #home-second  {
+    height: 100px;
+  }
+}
+
 #home-main-content  {
   text-align: center;
   padding: 0;
@@ -104,7 +129,7 @@ h1  {
 }
 
 .twentytwenty-overlay {
-  width: 90%;
+
 }
 
 #quoter-wrap-one  {
@@ -240,6 +265,7 @@ h1  {
 
 #home-bottom  {
   padding-top: 50px;
+  margin-bottom: 0px;
 
 }
 
@@ -368,7 +394,11 @@ h1  {
   text-align: center;
 }
 
-#
+.page-headers {
+  font-family: inherit;
+  font-size: 55px;
+  color: white;
+}
 
 .page-headers  {
   color: white;
@@ -444,6 +474,203 @@ h1  {
   font-size: 50px;;
   color: white;
   font-weight: 400;
+}
+
+
+        /*   Gallery Page Layouts   */
+
+.gallery-wrapper  {
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+}
+
+.gallery-wrapper > h2 {
+  display: none;
+}
+
+.gallery-nav  {
+  display:inline-block;
+  width: 250px;
+  height: 504px;
+  padding-left: 10px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('http://www.kirstenalana.com/wp-content/uploads/2016/06/teal-tile.png');
+  border-top: 2px solid #CEA566;
+  border-right: 2px solid #CEA566;
+  text-align: center;
+  border-bottom: 2px solid #CEA566;
+}
+
+.gallery-nav > h2 {
+  margin-bottom: 15px;
+  color:  black;
+  font-size: 40px;
+}
+
+.nav-image   {
+  width: 20px;
+}
+.gal-nav-links  {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 20px;
+  color: white;
+  display: block;
+  font-size: 30px;
+  text-shadow: 0px 0px 3px black;
+}
+
+.gal-nav-links:first-child  {
+  margin-top: 60px;
+}
+
+.test-wrap  {
+  margin-left: 250px;
+  text-align: center;
+    border-top: 2px solid #CEA566;
+    overflow: hidden;
+}
+
+.gallery-header {
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  text-shadow: 0 0 10px #CEA566;
+  margin-top: 0px;
+  padding-top: 20px;
+
+
+}
+
+.slick-slider {
+  width: 700px;
+  overflow: hidden;
+  margin-left: 250px;
+  margin-bottom: 0px !important;
+}
+.gallery-content  {
+  border-top: 2px solid #CEA566;
+  display: inline-block;
+  background-color: #67b4c8;
+
+}
+
+
+@media screen and (max-width: 1000px ) {
+
+  .gallery-wrapper > h2 {
+    display: block;
+    font-family: inherit;
+    font-size: 50px;
+    color: white;
+  }
+  .slick-slider {
+    width: 100px;
+  }
+
+  .test-wrap  {
+    margin-left: 0;
+    margin: auto;
+    border: none;
+
+  }
+
+
+  .gallery-nav  {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+  }
+  .gal-nav-links:first-child  {
+    margin: 0
+  }
+
+  .gal-nav-links  {
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    font-size: 40px;
+  }
+
+
+  .gallery-nav > h2 {
+    display: none;
+  }
+}
+
+.slbImage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-height: none;
+}
+
+.slbImageWrap::after  {
+  background-color: rgba(255, 0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.slbCloseBtn  {
+  right: -40px;
+  top: 0px;
+}
+
+
+
+
+.slide-wrap-pp{
+    width:800px;
+    margin: 0 auto;
+    overflow:hidden;
+    position: relative;
+    height: 200px;
+    height: 500px;
+}
+
+.slide-pic{
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    position:absolute;
+}
+
+.gallery-content {
+  text-align: center;
+  padding: 20px;
+  line-height: 0;
+  column-count: 1;
+  column-gap: 5px;
+  display: inline-block;
+}
+
+.tile   {
+  width: 100%;
+  margin-bottom: 5px;
+
+}
+
+@media screen and (min-width: 800px) {
+  .gallery-content  {
+    column-count: 4;
+  }
+
+}
+@media screen and (min-width: 1000px) {
+  .gallery-content  {
+    column-count: 5;
+  }
+  .fav-content  {
+    column-count: 4;
+  }
+
 }
 
 
