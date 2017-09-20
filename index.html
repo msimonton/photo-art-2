@@ -37,6 +37,12 @@
     <link rel='stylesheet' href='../../parallax/simpleLightbox.css'>
     <script type='text/javascript' src='../../parallax/simpleLightbox.js'></script>
 
+    <!--  AMMap CDN  -->
+
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
   </head>
   <body>
 
@@ -146,6 +152,54 @@
       </div>
     </div>
     </div>
+
+
+    <a href='views/gallery/trips.html'><div class='col-md-10 col-md-offset-1 col-sm-12 trips-main'>
+      <h3 class='gal-header trips-header'>Places & Trips</h3>
+      <div id='chartdiv' class='gal-map'></div>
+    </div></a>
+
+
+
+
+    </div>
+
+    <script>
+    var map = AmCharts.makeChart("chartdiv", {
+      "type": "map",
+      "theme": "light",
+      "projection": "eckert3",
+      "zoomControl": {
+        "zoomControlEnabled": false,
+        "homeButtonEnabled": false
+      },
+      "dataProvider": {
+        "map": "worldLow",
+        "getAreasFromMap": true,
+      },
+      "areasSettings": {
+        "selectedColor": "#295e85",
+        "color": "#b9b9b9",
+        "selectable": false
+      },
+
+      "listeners": [{
+        "event": "init",
+        "method": function(e) {
+          preSelectCountries( ["US","TN","TZ","AE","CH","NZ","KR","IT","HR","AU","NZ","GR","CL"]);
+        }
+      }]
+    });
+
+
+    function preSelectCountries(list) {
+      for(var i = 0; i < list.length; i++) {
+        var area = map.getObjectById(list[i]);
+        area.showAsSelected = true;
+        map.returnInitialColor(area);
+      }
+    }
+    </script>
 
 
     <script type="text/javascript">

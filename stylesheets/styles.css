@@ -413,6 +413,15 @@ h1  {
   background-color: red;
 }
 
+.trips-main {
+  text-align: center;
+  background-color: white;
+}
+
+.trips-header {
+  color: black !important;
+}
+
 
 
 
@@ -707,6 +716,8 @@ h1  {
 
 #euro, #world  {
   cursor: pointer;
+  margin: auto;
+  text-align: center;
 }
 
 .active > h2 {
@@ -717,6 +728,8 @@ h1  {
   background-color: #74c1d5;
   position: absolute;
 }
+
+
 
 
 
