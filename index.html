@@ -16,7 +16,7 @@
     <script src="slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
     <link rel="stylesheet" href="slider/css/twentytwenty.css" type="text/css" media="screen" />
 
-    <script src='/javascripts/main.js' type="text/javascript"></script>
+    <script src='javascripts/main.js' type="text/javascript"></script>
 
 
 
@@ -30,9 +30,19 @@
 
             <!-- Animate on scroll plugin -->
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
-
     <script type="text/javascript" src="javascripts/main.js"></script>
     <link rel="stylesheet" href="stylesheets/styles.css">
+
+              <!-- Lightbox plugin -->
+    <link rel='stylesheet' href='../../parallax/simpleLightbox.css'>
+    <script type='text/javascript' src='../../parallax/simpleLightbox.js'></script>
+
+    <!--  AMMap CDN  -->
+
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
   </head>
   <body>
 
@@ -59,42 +69,54 @@
 
         <div class='container-fluid' id='home-main-content'>
           <div class='row' id='slider-container'>
-            <div class='col-md-3 col-sm-12' id='quoter-wrap-one'>
-              <h3 id='main-quote-first'> From a Photo</h3>
-              <h3 id='main-quote-second'> To a Painting</h3>
-          </div>
+            <h3 id='main-quote-first'> From a Photo</h3>
+            <h3 id='main-quote-second'> To a Painting</h3>
 
-          <div class='col-md-9 col-sm-12' id="slider">
-            <img src="images/slider/slider-before.jpg" />
-            <img  id='second' src="images/slider/slider-after.jpg" />
+          <div class='twentytwenty-container' id="slider">
+            <img id='first-slider' src="images/slider/slider-before-big.jpg" />
+            <img  id='second-slider' src="images/slider/slider-after-big.jpg" />
             </div>
-            <div class='col-md-3 col-sm-12' id='quoter-wrap'>
+            <!-- <div class='col-md-3 col-sm-12' id='quoter-wrap'>
               <h3 id='main-quote-first'>From a Photo</h3>
               <h3 id='main-quote-second'>To a Painting</h3>
-          </div>
+          </div> -->
           </div>
         </div>
 
+        <script>
+        $(document).ready(function()  {
+          var first = $('#main-quote-first');
+          var second = $('#main-quote-second');
+
+          first.animate({left: "10%", opacity: 1}, 1300)
+          second.delay(2500).animate({left:"55%", opacity: 1}, 1500)
+
+          first.delay(200).fadeOut(1000);
+          second.delay(200).fadeOut(1000)
+          $('.twentytwenty-overlay').delay(4000).animate({opacity: .2}, 1000)
+
+        })
+</script>
 
                 <!-- Featured Gallery Section -->
 
       <div class='container-fluid' id='home-fourth'>
         <h1 class='feature'>Featured Galleries</h1>
         <div class='row' id='block-wrap'>
-        <div class="block">
+        <a href='views/gallery/favorites.html'><div class="block">
           <img src="images/gallery/favorites/lambs.jpg" data-speed=".5" class="img-parallax">
           <h2>Favorites</h2>
-        </div>
+        </div></a>
 
-        <div class="block">
-          <img src="images/favorites/vail.jpg" data-speed="1" class="img-parallax">
+        <a href='views/gallery/photo-paintings.html'><div class="block">
+          <img src="images/gallery/photo-paintings/vail.jpg" data-speed="1" class="img-parallax">
           <h2>Photo Paintings</h2>
-        </div>
+        </div></a>
 
-        <div class="block">
+        <a href='views/gallery/photography.html'><div class="block">
           <img src="images/gallery/photography/doonbeg.jpg" data-speed="-1" class="img-parallax">
           <h2>Photography</h2>
-        </div>
+        </div></a>
       </div>
     </div>
 
@@ -113,23 +135,95 @@
           <h1 class='feature' id='feature-lower'> Been Lately</h1>
         </div>
         <div class='col-md-8 col-sm-12' id='late-wrap'>
-          <h2 id='lately-header'>San Fancisco</h2>
+          <h2 id='lately-header'>San Francisco</h2>
         <section id="lately">
-          <img class='tiles' src="images/been-lately/san-francisco/baker-bw.jpg" data-aos="zoom-out-up" data-aos-duration='1000'>
-          <img class='tiles' src="images/been-lately/san-francisco/bay-bridge.jpg" data-aos="flip-left" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/cable-art.jpg" data-aos="flip-right" data-aos-duration='2500'>
-          <img class='tiles' src="images/been-lately/san-francisco/cable-sel-color.jpg" data-aos="flip-left" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/gang-marathon.jpg" data-aos="zoom-in-up" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/ggbridge-bw.jpg" data-aos="flip-left" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/baker-topaz.jpg" data-aos="flip-down" data-aos-duration='1000'>
-          <img class='tiles' src="images/been-lately/san-francisco/lyell-finish.jpg" data-aos="fade-left-down" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/sf-buildings.jpg" data-aos="flip-up" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/Topofthemark.jpg" data-aos="zoom-in-up" data-aos-duration='1500'>
-          <img class='tiles' src="images/been-lately/san-francisco/muir-bw1.jpg" data-aos="zoom-out" data-aos-duration='1500'>
+          <a href='images/been-lately/san-francisco/baker-bw.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/baker-bw.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+          <a href='images/been-lately/san-francisco/bay-bridge.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/bay-bridge.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/cable-art.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/cable-art.jpg" data-aos="flip-right" data-aos-duration='2500'></a>
+          <a href='images/been-lately/san-francisco/cable-sel-color.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/cable-sel-color.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/gang-marathon.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/gang-marathon.jpg" data-aos="zoom-in-up" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/ggbridge-bw.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/ggbridge-bw.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/baker-topaz.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/baker-topaz.jpg" data-aos="flip-down" data-aos-duration='1000'></a>
+          <a href='images/been-lately/san-francisco/lyell-finish.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/lyell-finish.jpg" data-aos="fade-left-down" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/sf-buildings.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/sf-buildings.jpg" data-aos="flip-up" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/topofthemark.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/Topofthemark.jpg" data-aos="zoom-in-up" data-aos-duration='1500'></a>
+          <a href='images/been-lately/san-francisco/muir-bw1.jpg'><img class='tiles' src="images/been-lately/san-francisco/thumbs/muir-bw1.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
         </section>
       </div>
     </div>
     </div>
+
+
+    <a href='views/gallery/trips.html'><div class='col-md-10 col-md-offset-1 col-sm-12 trips-main'>
+      <h3 class='gal-header trips-header'>Places & Trips</h3>
+      <div id='chartdiv' class='gal-map'></div>
+    </div></a>
+
+
+
+
+    </div>
+
+    <script>
+    var map = AmCharts.makeChart("chartdiv", {
+      "type": "map",
+      "theme": "light",
+      "projection": "eckert3",
+      "zoomControl": {
+        "zoomControlEnabled": false,
+        "homeButtonEnabled": false
+      },
+      "dataProvider": {
+        "map": "worldLow",
+        "getAreasFromMap": true,
+      },
+      "areasSettings": {
+        "selectedColor": "#295e85",
+        "color": "#b9b9b9",
+        "selectable": false
+      },
+
+      "listeners": [{
+        "event": "init",
+        "method": function(e) {
+          preSelectCountries( ["US","TN","TZ","AE","CH","NZ","KR","IT","HR","AU","NZ","GR","CL"]);
+        }
+      }]
+    });
+
+
+    function preSelectCountries(list) {
+      for(var i = 0; i < list.length; i++) {
+        var area = map.getObjectById(list[i]);
+        area.showAsSelected = true;
+        map.returnInitialColor(area);
+      }
+    }
+    </script>
+
+
+    <script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+        "images/slider/slider-before.jpg",
+        "images/slider/slider-after.jpg",
+        "images/gallery/photography/rochester-green.jpg",
+        'images/gallery/black-white/plaza-bw.jpg',
+        'images/gallery/photo-paintings/seattle-ferris.jpg',
+        'images/gallery/favorites/santiago-model.jpg',
+      )
+
+      </script>
+
+
+
 
 
 
@@ -143,9 +237,10 @@
     <script>
     window.addEventListener('load', AOS.refresh)
     $(document).ready(function(){
+      $('#lately a').simpleLightbox();
 
       // Run the twenty-twenty image slider function
-    $("#slider").twentytwenty();
+    // $("#slider").twentytwenty();
 
 
 
