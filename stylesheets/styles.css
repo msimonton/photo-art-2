@@ -89,6 +89,7 @@ h1  {
   padding: 0;
   padding-bottom: 40px;
   width: 100%;
+  position: relative;
 
 
 }
@@ -101,24 +102,58 @@ h1  {
   padding-top: 50px;
 }
 
+#main-quote-first {
+  position: absolute;
+  opacity: 0;
+  /*background-color: rgba(0,0,0,.7);*/
+  color: white;
+  font-size: 70px;
+  font-family: 'Dancing Script', cursive;
+  top:20%;
+  left: 1%;
+  z-index: 200000;
+  padding: 10px 50px 10px 50px;
+}
+
+#main-quote-second {
+  position: absolute;
+  opacity: 0;
+  /*background-color: rgba(0,0,0,.7);*/
+  color: white;
+  font-size: 70px;
+  font-family: 'Dancing Script', cursive;
+  bottom:30%;
+  left: 45%;
+  z-index: 200000;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+
+}
+
 
 #slider-container {
-  width: 98%;
-  padding: 0;
-  margin: 0;
+  width: 90%;
   margin: auto;
+
 
 
 }
 
 .twentytwenty-wrapper {
+  margin:auto !important;
 
-
-  margin:auto;
 }
 
 .twentytwenty-container {
+  position: relative;
   padding: 0;
+  margin: auto;
+}
+
+.twentytwenty-overlay {
+  background-color: black;
+  opacity: .5;
+
 }
 
 #slider {
@@ -128,20 +163,28 @@ h1  {
   margin-top: 50px;
 }
 
-.twentytwenty-overlay {
-
+#slider img {
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
+
+#slider-container {
+  text-align: center;
+}
+
+
 
 #quoter-wrap-one  {
-  display: none;
 }
+
 
 #quoter-wrap  {
   padding: 0;
   margin-top: 250px;
 }
 
-@media screen and (max-width: 991px)  {
+/*@media screen and (max-width: 991px)  {
   #quoter-wrap-one  {
     display: block;
   }
@@ -161,22 +204,8 @@ h1  {
   #main-quote-second {
     margin-left: 10px;
   }
-}
+}*/
 
-#main-quote-first {
-
-  color: white;
-  font-size: 50px;
-  font-family: 'Dancing Script', cursive;
-
-
-}
-
-#main-quote-second {
-  color: white;
-  font-size: 50px;
-  font-family: 'Dancing Script', cursive;
-}
 
 
 #second {
