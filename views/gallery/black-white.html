@@ -34,7 +34,7 @@
 
 
 
-
+    <script type="text/javascript" src="../../javascripts/main.js"></script>
     <link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
 
 
@@ -78,27 +78,11 @@
         </div>
       </div>
 
+
+
       <h1 class='gallery-header'>Black & White</h1>
-      <section class='gallery-content fav-content'>
-        <a href='../../images/gallery/black-white/dancer-rock.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/dancer-rock-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/denver-pan.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/denver-pan-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/marc-wedding.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/marc-wedding-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/maria-nice.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/maria-nice-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/mining-hotel.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/mining-hotel-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/opera-house.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/opera-house-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/plaza-bw.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/plaza-bw-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/rower-bw.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/rower-bw-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/snow-bird.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/snow-bird-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/valparaiso-wall.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/valparaiso-wall-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/black-white/rrtracks.jpg'><img class='tile' src="../../images/gallery/black-white/thumbs/rrtracks-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-
-
-
-
-
-
+      <section class='gallery-content fav-content black-white-gal'>
         </section>
-
     </div>
   </div>
 
@@ -110,6 +94,11 @@
 
 <script>
     $(document).ready(function(){
+
+      // function to populate gallery (from main.js)
+      galPop(blackWhite, "black-white")
+
+          // function to init slider
       $('.slide-wrap-pp').slick({
         dots: true,
         slidesToScroll: 1,

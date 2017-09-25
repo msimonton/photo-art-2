@@ -34,7 +34,7 @@
 
 
 
-
+    <script type='text/javascript' src='../../javascripts/main.js'></script>
     <link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
 
 
@@ -79,35 +79,23 @@
         </div>
       </div>
 
+
+                  <!-- Gallery Section  -->
+
       <h1 class='gallery-header'>Photography</h1>
-      <section class='gallery-content fav-content'>
-        <a href='../../images/gallery/photography/chinese-boy.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/chinese-boy.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/train.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/train.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/seven-fal.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/seven-fal.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/dia-bw.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/dia-bw.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/doonbeg.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/doonbeg.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/gorilla-baby.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/gorilla-baby.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/rochester-green.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/rochester-green.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/les-brick.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/les-brick.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/peacock.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/peacock.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/infinity-pool.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/infinity-pool.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-        <a href='../../images/gallery/photography/roads-rome.jpg'><img class='tile' src="../../images/gallery/photography/thumbs/roads-rome.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-
-
-
-        </section>
-
+      <section class='gallery-content fav-content photography-gal'></section>
     </div>
   </div>
 
 
-
-
-
-
-
 <script>
     $(document).ready(function(){
+
+      // Functions to populate the gallery
+      galPop(photography, "photography")
+
+      // Init Slider
+
       $('.slide-wrap-pp').slick({
         dots: true,
         slidesToScroll: 1,
@@ -115,7 +103,6 @@
         infinite: true,
         fade: true,
         pauseOnHover: false,
-
       })
 
       $('.gallery-content a').simpleLightbox();
