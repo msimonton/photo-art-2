@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,8 +33,8 @@
 
 
 
-
-    <link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
+<script type='text/javascript' src='../../javascripts/main.js'></script>
+<link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
 
 
   </head>
@@ -79,30 +78,18 @@
       </div>
 
       <h1 class='gallery-header'>Favorites</h1>
-      <section class='gallery-content fav-content'>
-        <a href='../../images/gallery/favorites/vail-apres.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/vail-apres-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/dolce.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/dolce-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/doonbeg-pain.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/doonbeg-pain-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/Groznjan-croatia.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/Groznjan-croatia-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/lambs.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/lambs-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/oai-night.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/oai-night-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/oia.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/oia-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/rome-sunset.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/rome-sunset-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/favorites/santiago-model.jpg'><img class='tile' src="../../images/gallery/favorites/thumbs/santiago-model-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-
-        </section>
+      <section class='gallery-content fav-content favorites-gal'></section>
 
     </div>
   </div>
 
-
-
-
-
-
-
 <script>
     $(document).ready(function(){
+
+      // Functions to populate the gallery
+      galPop(favorites, "favorites")
+
+      // function to run the slider
       $('.slide-wrap-pp').slick({
         dots: true,
         slidesToScroll: 1,
@@ -110,7 +97,6 @@
         infinite: true,
         fade: true,
         pauseOnHover: false,
-
       })
 
       $('.gallery-content a').simpleLightbox();

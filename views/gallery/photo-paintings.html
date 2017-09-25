@@ -34,7 +34,7 @@
 
 
 
-
+    <script type='text/javascript' src='../../javascripts/main.js'></script>
     <link rel='stylesheet' type="text/css" href="../../stylesheets/styles.css"/>
 
 
@@ -80,25 +80,7 @@
       </div>
 
       <h1 class='gallery-header'>Photo Paintings</h1>
-      <section class='gallery-content'>
-          <a href='../../images/gallery/photo-paintings/seattle-ferris.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/seattle-ferris-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/bmoor-shop.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/bmoor-shop-t.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/bmoor-walkers.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/bmoor-walkers-t.jpg" data-aos="flip-right" data-aos-duration='2500'></a>
-          <a href='../../images/gallery/photo-paintings/denver-les-house.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/denver-les-house-t.jpg" data-aos="zoom-in-up" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/fao-schwartz.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/fao-schwartz-t.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/lily.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/lily-t.jpg" data-aos="flip-down" data-aos-duration='1000'></a>
-          <a href='../../images/gallery/photo-paintings/oia-church.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/oia-church-t.jpg" data-aos="flip-up" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/radishs.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/radishs-t.jpg" data-aos="zoom-in-up" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/sea-painter.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/sea-painter-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/bike-window.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/bike-window-t.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-          <a href='../../images/gallery/photo-paintings/times-square.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/times-square-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/Seattleabstract.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/Seattleabstract-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/sixteenth.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/sixteenth-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/maria-shop.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/maria-shop-t.jpg" data-aos="fade-left-down" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/stonetown.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/stonetown-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/vail.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/vail-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/walkers-dcmall.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/walkers-dcmall-t.jpg" data-aos="zoom-out" data-aos-duration='1500'></a>
-          <a href='../../images/gallery/photo-paintings/climber.jpg'><img class='tile' src="../../images/gallery/photo-paintings/photopainting-thumbs/climber-t.jpg" data-aos="flip-left" data-aos-duration='1500'></a>
+      <section class='gallery-content photo-paintings-gal'>
 
         </section>
 
@@ -120,6 +102,10 @@
 
 <script>
     $(document).ready(function(){
+      // function to populate gallery (from main.js)
+      galPop(photoPaintings, "photo-paintings")
+
+      // function to init slider
       $('.slide-wrap-pp').slick({
         dots: true,
         slidesToScroll: 1,
