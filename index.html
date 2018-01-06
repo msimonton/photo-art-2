@@ -7,46 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liz Simonton|Photoart</title>
 
+                    <!--  jQuery CDN -->
 
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script src="slider/js/jquery.event.move.js" type="text/javascript"></script>
-    <script src="slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="slider/css/twentytwenty.css" type="text/css" media="screen" />
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="plugins/slider/js/jquery.event.move.js" type="text/javascript"></script>
+  <script src="plugins/slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="plugins/slider/css/twentytwenty.css" type="text/css" media="screen" />
 
-    <script src='javascripts/main.js' type="text/javascript"></script>
-
-
+                      <!--  google fonts -->
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
             <!-- Animate on scroll plugin -->
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
-    <script type="text/javascript" src="javascripts/main.js"></script>
-    <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 
-              <!-- Lightbox plugin -->
-    <link rel='stylesheet' href='../../parallax/simpleLightbox.css'>
-    <script type='text/javascript' src='../../parallax/simpleLightbox.js'></script>
 
-    <!--  AMMap CDN  -->
+  <script type="text/javascript" src="javascripts/main.js"></script>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+
+            <!-- Lightbox plugin -->
+  <link rel='stylesheet' href='plugins/parallax/simpleLightbox.css'>
+  <script type='text/javascript' src='../../plugins/parallax/simpleLightbox.js'></script>
+
+              <!--  AMMap CDN  -->
 
   <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
   <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
+
+  <!-- Animate on Scroll Plugin -->
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
   </head>
   <body>
-
-
 
                 <!-- Header/Nav -->
 
@@ -63,6 +67,16 @@
           </div>
           <div class='links-wrapper'><a class='nav-links' target="_blank" href ='http://www.lizsimontonphotoart.com/blog'>Blog</a>
           </div>
+          <div class='dropdown'>
+            <img class='dropdown-btn' src='../../images/icons/menu-btn.png'/>
+          </div>
+        </div>
+        <ul class='drop-menu'>
+          <a href='index.html'><li>Home</li></a>
+          <a href='gallery.html'><li>Gallery</li></a>
+          <a href='about.html'><li>My Story</li></a>
+          <a target='_blank' href='http://www.lizsimontonphotoart.com/blog'><li>Blog</li>
+        </ul>
         </section>
 
                 <!-- Before/After Slider -->
@@ -71,7 +85,6 @@
           <div class='row' id='slider-container'>
             <h3 id='main-quote-first'> From a Photo</h3>
             <h3 id='main-quote-second'> To a Painting</h3>
-
           <div class='twentytwenty-container' id="slider">
             <img id='first-slider' src="images/slider/slider-before-big.jpg" />
             <img  id='second-slider' src="images/slider/slider-after-big.jpg" />
@@ -86,7 +99,10 @@
         <script>
         $(document).ready(function()  {
 
+
+          setTimeout( function(){
           $('#slider').twentytwenty()
+        },50)
           var first = $('#main-quote-first');
           var second = $('#main-quote-second');
 
@@ -96,6 +112,7 @@
           first.delay(200).fadeOut(1000);
           second.delay(200).fadeOut(1000)
           $('.twentytwenty-overlay').delay(4000).animate({opacity: .2}, 1000)
+
 
         })
 </script>
@@ -156,16 +173,17 @@
     </div>
 
 
-    <a href='views/gallery/trips.html'><div class='col-md-10 col-md-offset-1 col-sm-12 trips-main'>
+    <a href='views/gallery/trips.html'>
+      <div class='col-md-10 col-md-offset-1 col-sm-12 trips-main'>
       <h3 class='gal-header trips-header'>Places & Trips</h3>
       <div id='chartdiv' class='gal-map'></div>
-    </div></a>
-
-
-
+    </div>
+  </a>
 
     </div>
 
+
+                <!-- Javascript maps controller  -->
     <script>
     var map = AmCharts.makeChart("chartdiv", {
       "type": "map",
@@ -204,7 +222,7 @@
     </script>
 
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
 			var images = new Array()
 			function preload() {
 				for (i = 0; i < preload.arguments.length; i++) {
@@ -221,7 +239,7 @@
         'images/gallery/favorites/santiago-model.jpg',
       )
 
-      </script> -->
+      </script>
 
 
 

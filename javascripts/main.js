@@ -1,3 +1,11 @@
+// Dropdown menu for mobile
+$(document).ready(function()  {
+  $('.dropdown').click(function() {
+    $('.drop-menu').slideToggle('slow')
+  })
+})
+
+
 
         // Image names to populate the galleries
 
@@ -63,67 +71,43 @@ var favorites = [
 ]
 
 
+var aos = [
+  'fade-up-right',
+  'fade-up-left',
+  'fade-down-right',
+  'fade-down-left',
+  'flip-up',
+  'flip-down',
+  'flip-right',
+  'flip-left',
+  'zoom-in-down',
+  'zoom-in-left',
+  'zoom-in-right',
+  'zoom-out-right',
+  'zoom-out-left'
+          ]
+
+var aosLength =[
+  '1500',
+  '1000',
+  '2000',
+  '1200',
+  '1700'
+]
 
 
         // function to populate the galleries
 function galPop(gal, name)  {
   $.each(gal, function(i, val) {
+    var aosSelect= aos[Math.floor(Math.random()*aos.length)]   //Return a random scroll animation
+    var aosLen = aosLength[Math.floor(Math.random()*aosLength.length)] //Return a random scroll animation duration
+
     var ham = $('.'+name+'-gal')
     var mainPath = '../../images/gallery/'+name+'/'
     var thumbPath = '../../images/gallery/'+name+'/thumbs/'
-    $("<a href='"+mainPath+val+".jpg'><img class='tile' src='"+thumbPath+val+".jpg'/> </a>").appendTo(ham)
-})}
-
-
-
-
-
-
-
-
-
-
-// '../images/gallery/photography/thumbs/chinese-boy.jpg',
-// '../images/gallery/photography/thumbs/train.jpg',
-// '../images/gallery/photography/thumbs/seven-fal.jpg',
-// '../images/gallery/photography/thumbs/dia-bw.jpg',
-// '../images/gallery/photography/thumbs/doonbeg.jpg',
-// '../images/gallery/photography/thumbs/gorilla-baby.jpg',
-// '../images/gallery/photography/thumbs/rochester-green.jpg',
-// '../images/gallery/photography/thumbs/les-brick.jpg',
-// '../images/gallery/photography/thumbs/peacock.jpg',
-// '../images/gallery/photography/thumbs/infinity-pool.jpg',
-// '../images/gallery/photography/thumbs/roads-rome.jpg'
-
-
-
-
-
-
-
-
-
-$(document).ready( function()  {
-  // function loadImage (images, imgContainer) {
-  //   for(var i=0; i<images.length; i++)  {
-  //     $(imgContainer).append("<a href='../../images/gallery/photography/" +images[i]+".jpg' <img class='tile' src='../../images/gallery/photography/thumbs/" +images[i]+".jpg'></a>")
-  //
-  //     console.log(images[i])
-  //
-  //   }
-  // }
-  // loadImage(photography, ".photographygal")
-
-// $("#slider").twentytwenty();
-})
-
-
-
-
-
-
-
-
+    $("<a href='"+mainPath+val+".jpg'><img class='tile' src='"+thumbPath+val+".jpg' data-aos='"+aosSelect+"' data-aos-duration='"+aosLen+"'/> </a>").appendTo(ham)
+  })
+}
 
 $('.img-parallax').each(function(){
   var img = $(this);
@@ -135,6 +119,8 @@ $('.img-parallax').each(function(){
     var winH = $(this).height();
     var parentH = imgParent.innerHeight();
 
+
+    // Parallax function
 
     // The next pixel to show on screen
     var winBottom = winY + winH;

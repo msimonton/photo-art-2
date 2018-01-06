@@ -5,6 +5,10 @@ html, body  {
     background-color: #242e49;
 }
 
+.row {
+  max-width: 100%;
+}
+
 h1  {
   font-family: 'Dancing Script', cursive;
 }
@@ -67,6 +71,30 @@ h1  {
   width: 40px;
 }
 
+
+
+.drop-menu  {
+  display: none;
+  position: absolute;
+  left: 5%;
+  top: 100px;
+  list-style: none;
+  width: 90%;
+  /* margin: 0px 10px 0px 10px; */
+  background-color: rgba(255, 255, 255, .8);
+  border: 2px solid black;
+  z-index: 2;
+  text-align: center;
+}
+
+.drop-menu > a {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  margin: 8px 0px 8px 0px;
+}
+
+
 @media screen and (max-width: 800px)  {
   .dropdown {
     display: block;
@@ -83,6 +111,7 @@ h1  {
     height: 100px;
   }
 }
+
 
 #home-main-content  {
   text-align: center;
@@ -139,6 +168,10 @@ h1  {
 
 }
 
+#slider-holder  {
+  width: 100%;
+}
+
 .twentytwenty-wrapper {
   margin:auto !important;
 
@@ -156,6 +189,7 @@ h1  {
 
 }
 
+
 #slider {
 
   /*border: 5px solid #CEA566;*/
@@ -169,8 +203,12 @@ h1  {
   margin: auto;
 }
 
-#slider-container {
+#slider {
   text-align: center;
+}
+
+.twentytwenty-before-label::before, .twentytwenty-after-label::before {
+  background-color: rgba(0,0,0,1)!important;
 }
 
 
