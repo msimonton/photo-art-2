@@ -54,7 +54,7 @@
   </div>
 </div>
 <ul class='drop-menu'>
-  <a href='../../index.html'><li>Home</li></a>
+  <a href='../index.html'><li>Home</li></a>
   <a href='gallery.html'><li>Gallery</li></a>
   <a href='about.html'><li>My Story</li></a>
   <a target='_blank' href='http://www.lizsimontonphotoart.com/blog'><li>Blog</li>
@@ -72,7 +72,7 @@
       </a>
       <a href='black-white.html'>
         <div class='gal-links'>
-          <img class='gal-links-img img-parallax' src='../../images/gallery/black-white/plaza-bw.jpg' data-speed="1"/>
+          <img class='gal-links-img img-parallax' src='../../images/gallery/black-white/plaza-bw.jpg' data-speed=".3"/>
           <h2>Black & White</h2>
         </div>
       </a>
@@ -80,7 +80,7 @@
     <div class='row' id='gal-row-bottom'>
       <a href='photo-paintings.html'>
         <div class='gal-links'>
-          <img class='gal-links-img img-parallax' src='../../images/gallery/photo-paintings/seattle-ferris.jpg' data-speed=".3"/>
+          <img class='gal-links-img img-parallax' src='../../images/gallery/photo-paintings/seattle-ferris.jpg' data-speed="1.3"/>
           <h2>Photo Paintings</h2>
         </div>
       </a>
@@ -152,37 +152,37 @@ $(document).ready(function(){
 
 
 // script for the feature gallery parallax
-// $('.img-parallax').each(function(){
-//   var img = $(this);
-//   var imgParent = $(this).parent();
-//   function parallaxImg () {
-//     var speed = img.data('speed');
-//     var imgY = imgParent.offset().top;
-//     var winY = $(this).scrollTop();
-//     var winH = $(this).height();
-//     var parentH = imgParent.innerHeight();
-//
-//
-//
-//     var winBottom = winY + winH;
-//     if (winBottom > imgY && winY < imgY + parentH) {
-//       var imgBottom = ((winBottom - imgY) * speed);
-//       var imgTop = winH + parentH;
-//       var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
-//     }
-//     img.css({
-//       top: imgPercent + '%',
-//       transform: 'translate(-50%, -' + imgPercent + '%)'
-//     });
-//   }
-//   $(document).on({
-//     scroll: function () {
-//       parallaxImg();
-//     }, ready: function () {
-//       parallaxImg();
-//     }
-//   });
-// });
+$('.img-parallax').each(function(){
+  var img = $(this);
+  var imgParent = $(this).parent();
+  function parallaxImg () {
+    var speed = img.data('speed');
+    var imgY = imgParent.offset().top;
+    var winY = $(this).scrollTop();
+    var winH = $(this).height();
+    var parentH = imgParent.innerHeight();
+
+
+
+    var winBottom = winY + winH;
+    if (winBottom > imgY && winY < imgY + parentH) {
+      var imgBottom = ((winBottom - imgY) * speed);
+      var imgTop = winH + parentH;
+      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+    }
+    img.css({
+      top: imgPercent + '%',
+      transform: 'translate(-50%, -' + imgPercent + '%)'
+    });
+  }
+  $(document).on({
+    scroll: function () {
+      parallaxImg();
+    }, ready: function () {
+      parallaxImg();
+    }
+  });
+});
 
 
 

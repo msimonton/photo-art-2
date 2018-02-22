@@ -70,6 +70,57 @@ var favorites = [
   'vail-apres'
 ]
 
+var euro = [
+
+]
+
+var world =[
+  'africasureal-project',
+  'balance',
+  'kili',
+  'liz-fish',
+  'masaii-Project',
+  'plane-wing',
+  'plane-tail',
+  'posts',
+  'queenstown-rock-skipping',
+  'queenstown-sunset',
+  'rhino-collage',
+  'rhinos-frame',
+  'safari-collage',
+  'skip-fish',
+  'skip-safari-breakfast',
+  'stonetown-street-scene',
+  'sydney-australia',
+  'sydney-bridge',
+  'sydney-opera-house-2',
+  'sydney-opera-house',
+  'tasting-NZ',
+  'trer-egrites',
+  'waterbuffalo-tanzania',
+  'Worries-blessings',
+  'zanzibar-sunset800',
+  'zebras-distorted'
+
+]
+
+var europe= [
+  'cable-car-view',
+  'canal-hands',
+  'me-mystique-hotel',
+  'city-view1',
+  'dolce-vida',
+  'gondola1',
+  'infinity-pool',
+  'me-palace2',
+  'Perast1',
+  'positano-beach',
+  'roads-lead-to-Rome',
+  'me-deck-night',
+  'sunset-final',
+  'unbrellas-1'
+]
+
 
 var aos = [
   'fade-up-right',
@@ -96,18 +147,41 @@ var aosLength =[
 ]
 
 
-        // function to populate the galleries
+    // function to populate the galleries. Must have strict naming conventions in order to work.
 function galPop(gal, name)  {
   $.each(gal, function(i, val) {
-    var aosSelect= aos[Math.floor(Math.random()*aos.length)]   //Return a random scroll animation
-    var aosLen = aosLength[Math.floor(Math.random()*aosLength.length)] //Return a random scroll animation duration
-
-    var ham = $('.'+name+'-gal')
-    var mainPath = '../../images/gallery/'+name+'/'
-    var thumbPath = '../../images/gallery/'+name+'/thumbs/'
-    $("<a href='"+mainPath+val+".jpg'><img class='tile' src='"+thumbPath+val+".jpg' data-aos='"+aosSelect+"' data-aos-duration='"+aosLen+"'/> </a>").appendTo(ham)
+    //Return a random scroll animation
+    var aosSelect= aos[Math.floor(Math.random()*aos.length)];
+    //Return a random scroll animation duration
+    var aosLen = aosLength[Math.floor(Math.random()*aosLength.length)];
+    //The .gallery-content section on each gallery page must also have the class that equals galClass
+    var galClass = $('.'+name+'-gal');
+    var mainPath = '../../images/gallery/'+name+'/';
+    var thumbPath = '../../images/gallery/'+name+'/thumbs/';
+    $("<a href='"+mainPath+val+".jpg'><img class='tile' src='"+thumbPath+val+".jpg' data-aos='"+aosSelect+"' data-aos-duration='"+aosLen+"'/> </a>").appendTo(galClass)
   })
 }
+
+
+
+
+function galPopTrips(gal, name)  {
+  $.each(gal, function(i, val) {
+    //Return a random scroll animation
+    var aosSelect= aos[Math.floor(Math.random()*aos.length)];
+    //Return a random scroll animation duration
+    var aosLen = aosLength[Math.floor(Math.random()*aosLength.length)];
+    //The .gallery-content section on each gallery page must also have the class that equals galClass
+    var galClass = $('.'+name+'-gal');
+    var mainPath = '../../images/trips/'+name+'/';
+    var thumbPath = '../../images/trips/'+name+'/thumbs/';
+    $("<a href='"+mainPath+val+".jpg'><img class='tile' src='"+thumbPath+val+".jpg' data-aos='"+aosSelect+"' data-aos-duration='"+aosLen+"'/> </a>").appendTo(galClass)
+  })
+}
+
+
+
+
 
 $('.img-parallax').each(function(){
   var img = $(this);
