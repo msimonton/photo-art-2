@@ -306,19 +306,9 @@ h1  {
   font-weight: 400;
 }
 
+
 .img-parallax {
   height: 200%;
-  /*z-index: -1;*/
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%,0);
-  pointer-events: none
-}
-
-.img-parallax {
-
-  /*z-index: -1;*/
   position: absolute;
   top: 0;
   left: 50%;
@@ -335,12 +325,12 @@ h1  {
 #feature-wrapper  {
   font-family: 'Dancing Script', cursive;
 
-  display: flex;
-  width: 37%;
+
+  width: 90%;
   text-align: center;
   height: 100%;
-  margin-top: 200px;
-  flex-direction: column;
+  margin-top: 20px;
+
 }
 
 .splitter {
@@ -373,9 +363,12 @@ h1  {
 
 
 #late-wrap  {
-  width: 60%;
+  width: 90%;
   display: inline-block;
   text-align: center;
+  display: flex;
+  align-items: center;
+
 }
 
 #lately {
@@ -385,6 +378,18 @@ h1  {
   column-count:         4;
   column-gap:           10px;
   display: inline-block;
+}
+
+.lately-title {
+  height: inherit;
+
+}
+
+.hidden-title {
+  display: none;
+  color: white;
+  font-size: 50px;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 801px)  {
@@ -407,6 +412,14 @@ h1  {
     margin-bottom: 10px;
   }
 
+  .lately-title {
+    display: none;
+  }
+
+  .hidden-title {
+    display: block;
+  }
+
 
   #feature-wrapper  {
 
@@ -416,7 +429,6 @@ h1  {
     height: 100%;
     margin-top: 15px;
 
-    flex-direction: row;
     border-bottom: 5px solid #CEA566;
 
   }
@@ -425,12 +437,17 @@ h1  {
   }
 }
 
+#feature-upper {
+  text-align: left;
+  padding-left: 40px;
+}
+
 #lately-header  {
   font-family: 'Dancing Script', cursive;
   color: white;
   font: iherit;
   margin: auto;
-  font-size: 40px;
+  font-size: 70px;
   text-decoration: underline;
 
 }
