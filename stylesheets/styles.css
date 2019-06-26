@@ -14,13 +14,14 @@ h1  {
 }
 
 footer {
-  height: 20px;
+  height: 30px;
   margin-top: 12px;
   width: 100%;
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+
 }
 
 .main {
