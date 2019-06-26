@@ -13,6 +13,16 @@ h1  {
   font-family: 'Dancing Script', cursive;
 }
 
+footer {
+  height: 20px;
+  margin-top: 12px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main {
   margin: 0;
   padding: 0;
