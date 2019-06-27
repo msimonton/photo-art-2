@@ -260,7 +260,8 @@ footer {
 
 
 #home-fourth  {
-      background-image: url('http://www.kirstenalana.com/wp-content/uploads/2016/06/teal-tile.png');
+      background-image: url("../images/main/background.jpg");
+      background-size: cover;
       width: 100%;
       padding: 20px 0 50px 0;
       text-align: center;
