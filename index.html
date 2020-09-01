@@ -17,6 +17,10 @@
   <script src="plugins/slider/js/jquery.twentytwenty.js" type="text/javascript"></script>
   <link rel="stylesheet" href="plugins/slider/css/twentytwenty.css" type="text/css" media="screen" />
 
+  <!-- Lightbox plugin -->
+<link rel='stylesheet' href='plugins/simpleLightbox/dist/simpleLightbox.min.css'>
+<script type='text/javascript' src='../../plugins/simpleLightbox/dist/simpleLightbox.min.js'></script>
+
                       <!--  google fonts -->
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -34,9 +38,6 @@
   <script type='text/javascript' src='javascripts/map.js'></script>
   <link rel="stylesheet" href="stylesheets/styles.css">
 
-            <!-- Lightbox plugin -->
-  <link rel='stylesheet' href='plugins/parallax/simpleLightbox.css'>
-  <script type='text/javascript' src='../../plugins/parallax/simpleLightbox.js'></script>
 
               <!--  AMMap CDN  -->
 
@@ -68,7 +69,7 @@
           <div id='main-logo'><h1 class='logo'>Liz Simonton</h1><h2 class='logo '>PhotoArt</h2></div>
           <div class='links-wrapper'><a class='nav-links' target="_blank" href ='https://www.lizsimontonphotoart.com/blog'>Blog</a>
           </div>
-          <div class='links-wrapper'><a class='nav-links' target="_blank" href ='https://www.lizsimontonphotoart.com/blog/store/'>Store</a>
+          <div class='links-wrapper'><a class='nav-links' target="_blank" href ='https://www.lizsimontonphotoart.com/blog/stock-photo-store/'>Store</a>
           </div>
           <div class='links-wrapper'><a class='nav-links' target="_blank" href ='https://www.lizsimontonphotoart.com/blog/merchandise'>Merchandise</a>
           </div>
@@ -81,7 +82,7 @@
           <a href='gallery.html'><li>Gallery</li></a>
           <a href='about.html'><li>My Story</li></a>
           <a target='_blank' href='http://www.lizsimontonphotoart.com/blog'><li>Blog</li></a>
-          <a target='_blank' href='http://www.lizsimontonphotoart.com/blog'><li>Store</li></a>
+          <a target='_blank' href='https://www.lizsimontonphotoart.com/blog/stock-photo-store/'><li>Store</li></a>
           <a target='_blank' href='https://www.lizsimontonphotoart.com/blog/merchandise/'><li>Merchandise</li></a>
         </ul>
         </section>
@@ -99,10 +100,14 @@
               <span>Travel</span>
             </div>
           </div>
-          <a class='submenu-link' href='./views/gallery/gal-main.html'>
+          <a class='submenu-link' href='https://www.lizsimontonphotoart.com/blog/lifestyle/'>
             <div class='submenu-item item-three'>
               <span>Lifestyle</span>
             </div>
+          </a>
+        </div>
+        <div id='shop-products'>
+          <a href='http://www.lizsimontonphotoart.com/blog/shop-our-favorite-products/' target="_blank"><h2 id='shop-products-text'>Shop Some of My Favorite Products</h2>
           </a>
         </div>
                 <!-- Before/After Slider -->
@@ -124,6 +129,7 @@
 
         <script>
         $(document).ready(function()  {
+  var lightbox = $('.lately a').simpleLightbox();
 
 
           setTimeout( function(){
@@ -173,7 +179,7 @@
       <h1>Travel</h1>
     </div>
     <div id='next-travel'>
-      <p>Up next: Bali, Japan and Cancun</p>
+      <!-- <p>Up next: Japan and Cabo</p> -->
     </div>
 
 
@@ -181,62 +187,88 @@
 
         <div class='container-fluid' id='home-bottom'>
           <div class='row'>
-          <div class='col-md-12 col-sm-12' id='feature-wrapper'>
+          <div class='col-md-8 col-md-offset-2 col-sm-12' id='feature-wrapper'>
           <h1 class='feature' id='feature-upper'>Where I've Been Lately</h1>
         </div>
       </div>
+
+
+
+      <div class='col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1 spreader'></div>
+
+      <div>
+        <div class='col-md-12 col-sm-12' id='late-wrap'>
+        <div class='col-md-9 col-sm-12'>
+          <h1 class='hidden-title'>Colorado and Wyoming</h1>
+          <section class="lately">
+            <a href='images/been-lately/colo/colo-01.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-01.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-02.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-02.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-03.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-03.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-04.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-04.jpg" data-aos="flip-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-05.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-05.jpg" data-aos="flip-right" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-06.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-06.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-07.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-07.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-08.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-08.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-09.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-09.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-10.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-10.jpg" data-aos="flip-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-11.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-11.jpg" data-aos="flip-right" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-12.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-12.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-13.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-13.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/colo/colo-14.jpg'><img class='tiles' src="images/been-lately/colo/thumbs/colo-14.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+
+          </section>
+
+        </div>
+        <div class='col-md-3 col-sm-12 lately-title'>
+          <h2 id='lately-header'>Colorado and Wyoming</h2>
+        </div>
+        </div>
+        </div>
+
 
 
       <div class='col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1 spreader'></div>
       <div>
         <div class='col-md-12 col-sm-12' id='late-wrap'>
           <div class='col-md-4 col-sm-12 lately-title'>
-          <h2 id='lately-header' style=''>Austria</h2>
+          <h2 id='lately-header' style=''>Cabo</h2>
         </div>
         <div class='col-md-8 col-sm-12'>
-          <h1 class='hidden-title'>Austria</h1>
+          <h1 class='hidden-title'>Cabo</h1>
           <section class="lately">
-            <a href='images/been-lately/austria/austria_00.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_00.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-01.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-01.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_01.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_01.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-02.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-02.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_02.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_02.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-03.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-03.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_03.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_03.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-04.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-04.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_04.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_04.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-05.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-05.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_05.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_05.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-06.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-06.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_06.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_06.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-07.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-07.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_07.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_07.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-08.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-08.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_08.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_08.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-09.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-09.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_09.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_09.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-10.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-10.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_10.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_10.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-11.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-11.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_11.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_11.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-12.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-12.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_12.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_12.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-13.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-13.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_13.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_13.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-14.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-14.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_14.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_14.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-15.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-15.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_15.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_15.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-16.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-16.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
 
-            <a href='images/been-lately/austria/austria_16.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_16.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
-
-            <a href='images/been-lately/austria/austria_17.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_17.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-
-            <a href='images/been-lately/austria/austria_18.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_18.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
-
-            <a href='images/been-lately/austria/austria_19.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_19.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-
-            <a href='images/been-lately/austria/austria_20.jpg'><img class='tiles' src="images/been-lately/austria/thumbs/austria_20.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+            <a href='images/been-lately/cabo/cabo-17.jpg'><img class='tiles' src="images/been-lately/cabo/thumbs/cabo-17.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
 
 
           </section>
@@ -250,30 +282,56 @@
       <div>
         <div class='col-md-12 col-sm-12' id='late-wrap'>
         <div class='col-md-9 col-sm-12'>
-          <h1 class='hidden-title'>Mexico</h1>
+          <h1 class='hidden-title'>Japan</h1>
           <section class="lately">
-            <a href='images/been-lately/mexico/mexico_06.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_06.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_01.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_01.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_02.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_02.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_03.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_03.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_04.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_04.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_05.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_05.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_07.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_07.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_08.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_08.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_09.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_09.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_10.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_10.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_11.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_11.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_12.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_12.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_13.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_13.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_14.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_14.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_15.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_15.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-            <a href='images/been-lately/mexico/mexico_16.jpg'><img class='tiles' src="images/been-lately/mexico/thumbnails/mexico_16.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+            <a href='images/been-lately/japan-2/japan-2-01.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-01.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-02.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-02.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-03.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-03.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-04.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-04.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-05.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-05.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-06.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-06.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-07.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-07.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-08.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-08.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-09.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-09.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-10.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-10.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-11.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-11.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-12.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-12.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-13.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-13.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-14.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-14.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-15.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-15.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-16.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-16.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-18.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-18.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-19.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-19.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-20.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-20.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-21.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-21.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
+
+            <a href='images/been-lately/japan-2/japan-2-22.jpg'><img class='tiles' src="images/been-lately/japan-2/thumbs/japan-2-22.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
+
           </section>
 
 
       </div>
       <div class='col-md-3 col-sm-12 lately-title'>
-        <h2 id='lately-header'>Mexico</h2>
+        <h2 id='lately-header'>Japan</h2>
       </div>
       </div>
       </div>
@@ -281,40 +339,13 @@
       <div class='col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1 spreader'></div>
 
 
-      <div>
-  <div class='col-md-12 col-sm-12' id='late-wrap'>
-    <div class='col-md-4 col-sm-12 lately-title'>
-    <h2 id='lately-header' style=''>Switzerland</h2>
-  </div>
-  <div class='col-md-8 col-sm-12'>
-    <h1 class='hidden-title'>Switzerland</h1>
-    <section class="lately">
-      <a href='images/been-lately/switzerland-18/bikegroup.jpg'><img class='tiles' src="images/been-lately/switzerland-18/bikegroup.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/cloudsabovechurch.jpg'><img class='tiles' src="images/been-lately/switzerland-18/cloudsabovechurch.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
-      <!-- <a href='images/been-lately/switzerland-18/favcolor.jpg'><img class='tiles' src="images/been-lately/switzerland-18/favcolor.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a> -->
-      <a href='images/been-lately/switzerland-18/Bridgecolor.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Bridgecolor.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/Daiseyhiking-2.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Daiseyhiking-2.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/fondue.jpg'><img class='tiles' src="images/been-lately/switzerland-18/fondue.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/lucernebikes.jpg'><img class='tiles' src="images/been-lately/switzerland-18/lucernebikes.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/grindfirst5.jpg'><img class='tiles' src="images/been-lately/switzerland-18/grindfirst5.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/churchatnight.jpg'><img class='tiles' src="images/been-lately/switzerland-18/churchatnight.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/grindfirst6.jpg'><img class='tiles' src="images/been-lately/switzerland-18/grindfirst6.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/mountain-pic.jpg'><img class='tiles' src="images/been-lately/switzerland-18/mountain-pic.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/swissflag.jpg'><img class='tiles' src="images/been-lately/switzerland-18/swissflag.jpg" data-aos="flip-up" data-aos-duration='1000'></a>
-      <!-- <a href='images/been-lately/switzerland-18/Cows1.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Cows1.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a> -->
-      <a href='images/been-lately/switzerland-18/Oechenenseehuthikers.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Oechenenseehuthikers.jpg" data-aos="flip-left" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/Giessbachphoto1.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Giessbachphoto1.jpg" data-aos="fade-left-down" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/LunchaboveGrindelwald-2.jpg'><img class='tiles' src="images/been-lately/switzerland-18/LunchaboveGrindelwald-2.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a>
-      <a href='images/been-lately/switzerland-18/Oeschenenseewaterfall.jpg'><img class='tiles' src="images/been-lately/switzerland-18/Oeschenenseewaterfall.jpg" data-aos="zoom-out-down" data-aos-duration='1000'></a>
-      <!-- <a href='images/been-lately/switzerland-18/.jpg'><img class='tiles' src="images/been-lately/switzerland-18/.jpg" data-aos="zoom-out-up" data-aos-duration='1000'></a> -->
-
 
     </section>
 
 
 </div>
 </div>
-</div>
+</div> -->
 
     </div>
 
@@ -332,6 +363,29 @@
       <small>&copy; Copyright 2017-2019, Lizsimontonphotoart Inc. All Rights Reserved</small>
       <span>Website designed by M.A. Simonton @ msimonton.com</span>
     </footer>
+
+
+    <!-- <script>
+    let ham = [
+  "zoom-out-up",
+  "flip-left",
+  "flip-up",
+  "zoom-out-down",
+  "flip-right"
+]
+
+let func  = ham[Math.floor(Math.random() * ham.length)]
+
+$(document).ready(function(){
+  $('.tiles').each(function() {
+    .attr('data-aos', func)
+})
+
+
+
+
+console.log(func)
+    </script> -->
 
                 <!-- Javascript maps controller  -->
     <script>
@@ -406,14 +460,14 @@
     <script>
     window.addEventListener('load', AOS.refresh)
     $(document).ready(function(){
-      $('#lately a').simpleLightbox();
+
 
       // Run the twenty-twenty image slider function
     // $("#slider").twentytwenty();
 
     $(".travel-link").click(function() {
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#home-bottom").offset().top
+        scrollTop: $(".travel-section").offset().top
     }, 2000);
 });
 

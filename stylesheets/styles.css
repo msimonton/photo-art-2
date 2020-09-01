@@ -242,6 +242,38 @@ footer {
 }
 
 
+
+#shop-products {
+  text-align: center;
+}
+
+#shop-products a {
+  text-decoration: none;
+}
+
+#shop-products-text {
+  background-color: black;
+  font-weight: bold;
+  width: 400px;
+  margin: auto;
+  text-decoration: none;
+  color: #ca8f20;
+  padding: 10px 5px 10px 5px;
+  border-bottom: 2px solid #CEA566;
+  border-left:2px solid #CEA566;
+  border-right: 2px solid #CEA566;
+  transition: all .3s ease-out;
+
+}
+
+#shop-products-text:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
 #slider-container {
   width: 90%;
   margin: auto;
@@ -546,7 +578,8 @@ footer {
 
 #lately-header  {
   font-family: 'Dancing Script', cursive;
-  color: white;
+  color: black;
+  background-color: white;
   font: iherit;
   margin: auto;
   font-size: 60px;
@@ -557,6 +590,8 @@ footer {
   width:100%;
   height: auto !important;
   margin-bottom: 10px;
+  background-color: white;
+  padding: 5px;
 }
 
 .aos-item {
